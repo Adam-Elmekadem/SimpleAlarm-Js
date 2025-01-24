@@ -15,11 +15,20 @@
     <title>Reminder avec Musique</title>
 </head>
 <body>
-    <h1>Rappel avec musique</h1>
-    <input type="datetime-local" id="reminderDate">
-    <button onclick="setReminder()">Définir le rappel</button>
-    <button id="pauseButton" style="display: none;" onclick="toggleAudio()">Pause</button>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Rappel avec musique</h1>
+        <h2>Choisissez une date, une heure et votre music préférée pour le rappel</h2>
+        <select name="musicChoice" id="musicChoice">
+            <option value="Bo9al moon.mp3">Moon</option>
+            <option value="Toto Diplomatico.mp3">Diplomatico</option>
+            <option value="Alarm.mp3">Alarm</option>
+        </select>
+        
+        <input type="datetime-local" id="reminderDate">
+        <button onclick="setReminder()">Définir le rappel</button>
+        <button id="pauseButton" style="display: none;" onclick="toggleAudio()">Pause</button>
+        <div id="result"></div>
+    </div>
 
     <script src="app-me.js"></script>
 </body>

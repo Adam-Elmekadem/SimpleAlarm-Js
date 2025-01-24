@@ -3,6 +3,7 @@ let isPlaying = false; // État de la musique
 
 function setReminder() {
     const input = document.getElementById("reminderDate").value;
+    let musicChoice = document.getElementById("musicChoice").value;
     const resultDiv = document.getElementById("result");
     const pauseButton = document.getElementById("pauseButton");
 
@@ -32,6 +33,7 @@ function setReminder() {
 
         if (timeDiff <= 0) {
             resultDiv.innerHTML = "Le rappel vient d'etre arrivé";
+            audio = new Audio(musicChoice);
             audio.play(); 
             isPlaying = true;
             pauseButton.style.display = "inline";
